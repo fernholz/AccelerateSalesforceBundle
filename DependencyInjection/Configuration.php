@@ -20,7 +20,7 @@ class Configuration implements ConfigurationInterface
         $treeBuilder = new TreeBuilder();
         $treeBuilder->root('accelerate_salesforce')
             ->children()
-                ->arrayNode('soap_client')
+                ->arrayNode('soap_client')->isRequired()
                     ->children()
                         ->scalarNode('wsdl')->isRequired()->end()
                         ->scalarNode('username')->isRequired()->end()
