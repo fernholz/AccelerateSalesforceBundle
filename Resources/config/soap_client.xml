@@ -16,8 +16,8 @@
                  class="Accelerate\SoapClient\ClientBuilder">
             <argument>%accelerate_salesforce.soap_client.wsdl%</argument>
             <argument>%accelerate_salesforce.soap_client.username%</argument>
-            <argument>%accelerate_salesforce.soap_client.password</argument>
-            <argument>%accelerate_salesforce.soap_client.token</argument>
+            <argument>%accelerate_salesforce.soap_client.password%</argument>
+            <argument>%accelerate_salesforce.soap_client.token%</argument>
         </service>
 
         <service id="accelerate_salesforce.logger"
