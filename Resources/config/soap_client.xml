@@ -1,0 +1,29 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <services>
+
+        <service id="accelerate_salesforce.soap_client" 
+                 class="Accelerate\SoapClient\Client"
+                 factory-service="accelerate_salesforce.soap_client.builder"
+                 factory-method="build">
+        </service>
+
+        <service id="accelerate_salesforce.soap_client.builder"
+                 class="Accelerate\SoapClient\ClientBuilder">
+            <argument>%accelerate_salesforce.soap_client.wsdl%</argument>
+            <argument>%accelerate_salesforce.soap_client.username%</argument>
+            <argument>%accelerate_salesforce.soap_client.password</argument>
+            <argument>%accelerate_salesforce.soap_client.token</argument>
+        </service>
+
+        <service id="accelerate_salesforce.logger"
+                 class="Phpi\Log\MonologLogAdapter">
+            <argument type="service" id="logger" />
+        </service>
+    </services>
+
+</container>
