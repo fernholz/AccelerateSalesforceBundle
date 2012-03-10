@@ -14,7 +14,8 @@
     ],
     "require": {
         "php": ">=5.3.0",
-        "accelerate/soap-client": "*"
+        "accelerate/soap-client": "*",
+        "phpi/log": "*"
     },
     "autoload": {
         "psr-0": {
